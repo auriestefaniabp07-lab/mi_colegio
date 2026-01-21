@@ -1,0 +1,440 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: "poppins", sans-serif;
+}
+
+img {
+    max-width: 1100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header1 {
+    display: flex;
+    align-items: center;
+    background-color:silver;
+    padding: 70px 0 0 0;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    padding: 5px;
+}
+
+.Logo {
+    font-size: 25px;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.menu .nav1 ul li {
+    position:relative;
+    float: left;
+    
+}
+
+.menu .nav1 ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: black;
+    display: block;
+}
+
+.menu .nav1 ul li a:hover {
+    color: blue;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    background-size: cover;
+    
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.div4 {
+    background-size: cover;
+    display: flex;
+    position: relative;
+    background-image:  url(img1.jpg);
+    margin-left: 0;
+    text-align: center;
+    margin: 0px 50px;
+   
+}
+
+.div4 {
+    padding-top: 12rem;
+    min-height: 130vh;
+    font-size: 30px;
+    text-transform: capitalize;
+    line-height: 1;
+    color: black;
+    margin-bottom: 100px;
+    transition: all 0.3s ease;
+}
+
+.div4 .primerboton {
+    font-size: 30px;
+    cursor: pointer;
+    line-height: 1;
+    background-color:silver ;
+}
+
+.section2 {
+    font-size: 20px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+.h21 {
+    font-size: 80px;
+    background-color: silver;
+}
+
+/*segunda pagina de estudiantes*/
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.cuadro {
+    width: 500px;
+    height: 400px;
+    background-color: silver;
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    
+}
+
+.body2 {
+    background-image: url(img2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.titulos {
+    line-height: 0.9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 300px;
+    margin: 0 auto;
+   
+}
+
+.section1 {
+    line-height: 1.5;
+}
+
+.primerboton:hover {
+    color: blue;
+}
+
+.boton {
+    cursor: zoom-in;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 110px;
+}
+
+
+.ul1 {
+    text-align: center;
+    border: 0px solid #f3eeee;
+    border-radius: 10px;
+    padding: 0px;
+    background-color: rgb(241, 233, 233);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0);
+    width: 300px;
+}
+
+.ul1 img {
+    width: 100%;
+    max-width: 200px;
+    height: max-content;
+    border-radius: 30px;
+    margin-bottom: 30px;
+}
+
+.ul1 h3 {
+    margin: 0;
+    color: black;
+    font-size: 1.3em;
+}
+
+.ul1 h3:hover {
+    color: blue;
+}
+
+.div_seccion img {
+    text-align: center;
+    justify-content: center;
+    width: 50%;
+    max-width: 1000px;
+    border: 10px;
+    margin: 50px;
+ 
+   
+}
+
+.div_seccion  {
+    text-align: center;
+    background-color: white;
+
+}
+
+/*footer*/
+.footer {
+    padding: 10px;
+}
+
+.footer-content {
+    flex-direction: column;
+    text-align: start;
+    background-color: silver;
+    color: white;
+}
+
+.botonS {
+    position: fixed;
+    bottom: 10px;
+    background-color: silver;
+    font-size: 100px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 100px;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.menu img {
+    float: left;
+    margin-right: 500px;
+    width: 75px;
+    font-size: 100px;
+    
+}
+
+.todasMaterias {
+    display: grid;
+    grid-template-columns: repeat(3, 20%);
+    /*tres columnas de ancho fijo*/
+    grid-template-rows: repeat(3, 25%);
+    /*dos filas de altura fija*/
+    border: 0px solid black;
+    padding: 20px;
+   
+    height: 100%;
+    width: 100%;
+    /*se utiliza ambos
+    place-items: stretch;*/
+    gap: 100px;
+    justify-content: center;
+}
+
+.todasMaterias img {
+    float: left;
+    margin-right: 300px;
+    width: 250px;  
+    background-color: silver;
+    border: 2px solid black;
+    font-size: 10px;
+    text-align: center;
+    padding: 20px;
+
+} 
+
+
+.primera {
+    background-color: silver;
+}
+
+.footer2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20px;
+}
+
+.registroestudiante {
+    text-align: center;
+    padding: 25%;
+    height: 100%;
+    width: 100%;
+    font-size: 30px;
+}
+
+@keyframes mostrar {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.registrodocente {
+    text-align: center;
+    padding: 25%;
+    height: 100%;
+    width: 100%;
+    font-size: 30px;
+}
+
+.contener {
+    background-image: url(docente.webp);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    height: 100vh;
+}
+/*pagina de crear registro*/
+
+.mainR{
+    margin: auto;
+    width: 90%;
+    max-width: 1000px;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.472), rgba(255, 255, 255, 0.365));
+    overflow: hidden;
+    padding: .7em;
+    border-radius: 1em;
+
+    display: grid;
+    grid-auto-rows: max-content;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: .6em;
+
+    animation: mostrar 1.5s ease-in-out;
+}
+
+@keyframes mostrar {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.main__figure{
+    overflow: hidden;
+    border-radius: 1em;
+    background-color: silver;
+    display: flex;
+}
+
+.main__img{
+    margin: auto;
+    width: 80%;
+    max-width: 80vw;
+    border-radius: 40px;
+}
+
+.main__contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5em;
+    padding: 3em .7em;
+    text-align: center;
+}
+
+.main__form{
+    display: grid;
+    justify-items: center;
+    gap: 1.5em;
+}
+
+.main__input{
+    width: 80%;
+    max-width: 500px;
+    outline: none;
+    border: none;
+    padding: 1em;
+    font: inherit;
+    border-radius: .6em;
+}
+
+.main__input--send{
+    background-color: silver;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.main__title{
+    font-size: 2.3rem;
+}
+
+.main__paragraph a {
+    margin: .3em 0;
+    text-decoration: none;
+    color:  #301962;
+}
+
+.main__paragraph a:hover {
+    color: black;
+}
+.main__social{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: center;
+    grid-auto-columns: max-content;
+    gap: 1em;
+}
+
+.main__link{
+    border: 1px solid #fff;
+    border-radius: 10px;
+    padding: .6em 1.5em;
+}
+
+.main__link:hover{
+    background-color: #fff;
+}
+
+.main__icon{
+    width: 30px;
+    height: 30px;
+}
