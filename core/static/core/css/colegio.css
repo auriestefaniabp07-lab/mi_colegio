@@ -80,7 +80,7 @@ img {
     background-size: cover;
     display: flex;
     position: relative;
-    background-image:  url(img1.jpg);
+    background-image: url('../img/img1.jpg');
     margin-left: 0;
     text-align: center;
     margin: 0px 50px;
@@ -321,7 +321,7 @@ img {
 }
 
 .contener {
-    background-image: url(docente.webp);
+    background-image: url('../img/docente.webp');
     display: flex;
     justify-content: center;
     align-items: center;
@@ -438,3 +438,4 @@ img {
     width: 30px;
     height: 30px;
 }
+

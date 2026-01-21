@@ -1,9 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="colegio.css">
+    <link rel="stylesheet" href="{% static 'core/css/colegio.css' %}">
     <title>Colegio</title>
 </head>
 <body>
@@ -36,8 +37,8 @@
           <section class="section2">
             <h2 class="h21">Menú</h2>
             <Section class="container">
-                 <div><a href="colegio2.html"  class="ul1" ><img src="img5 estu.jpg" alt=""><h3>Estudiantes</h3></a></div>
-                 <div><a href="seccion_colegio.html" class="ul1"><img src="img4.jpg" alt=""><h3>Secciones</h3></a></div>
+                 <div><a href="colegio2.html"  class="ul1" ><img src="{% static 'core/img/img5 estu.jpg' %}" alt=""><h3>Estudiantes</h3></a></div>
+                 <div><a href="seccion_colegio.html" class="ul1"><img src="{% static 'core/img/img4.jpg' %}" alt=""><h3>Secciones</h3></a></div>
                  <div><a href="materia_colegio.html"  class="ul1"><img src="img4.jpg" alt=""><h3>Materias</h3></a></div>
                  <div><a href="docente_colegio.html"  class="ul1"><img src="img3.jpg" alt=""><h3>Docentes</h3></a></div>
             </Section>
