@@ -1,23 +1,24 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="colegio.css">
+    <link rel="stylesheet" href="{% static 'core/css/colegio.css' %}">
     <title>Colegio</title>
 </head>
 <body>
     <header class="header1">
         <div class="menu">
             <a href="" class="Logo">Logo</a>
-            <img class="imgLogo" src="descarga.png" alt="">
+            <img class="imgLogo" src="{% static 'core/img/descarga.png' %}" alt="">
             <nav class="nav1">
                 <ul>
-                    <li><a href="colegio.html">Inicio</a></li>
-                    <li><a href="colegio2.html">Estudiantes</a></li>
-                    <li><a href="seccion_colegio.html">Secciones</a></li>
-                    <li><a href="materia_colegio.html">Materias</a></li>
-                    <li><a href="docente_colegio.html">Docentes</a></li>
+                    <li><a href="{% url 'index' %}">Inicio</a></li>
+                    <li><a href="{% url 'colegio2' %}">Estudiantes</a></li>
+                    <li><a href="{% url 'seccion_colegio' %}">Secciones</a></li>
+                    <li><a href="{% url 'materia_colegio' %}">Materias</a></li>
+                    <li><a href="{% url 'docente_colegio' %}">Docentes</a></li>
                 </ul>
             </nav>
         </div>
@@ -25,7 +26,7 @@
 
     <main class="mainR">
         <figure class="main__figure">
-            <img src="imgregistro.jpg" class="main__img">
+            <img src="{% static 'core/img/imgregistro.jpg' %}" class="main__img">
         </figure>
 
         <div class="main__contact">
@@ -45,20 +46,20 @@
 
             </form>
             <p>¿ya estas registrado?</p>
-            <p class="main__paragraph"><a href="colegio2.html">inicia sesion</a></p>
+            <p class="main__paragraph"><a href="{% url 'colegio2' %}">inicia sesion</a></p>
 
             <article class="main__social">
 
                 <a href="#" class="main__link">
-                    <img src="panorama.png" class="main__icon">
+                    <img src="{% static 'core/img/panorama.png' %}" class="main__icon">
                 </a>
 
                 <a href="#" class="main__link">
-                    <img src="cromo.png" class="main__icon">
+                    <img src="{% static 'core/img/cromo.png' %}" class="main__icon">
                 </a>
 
                 <a href="#" class="main__link">
-                    <img src="logotipo-de-apple.png" class="main__icon">
+                    <img src="{% static 'core/img/logotipo-de-apple.png' %}" class="main__icon">
                 </a>
 
             </article>
@@ -77,7 +78,7 @@
                     <li><a href="https://convivenciadigital.cl/las-10-webs-educativas-que
                         -no-te-pueden-faltar-esta-vuelta-a-clases/">Mejor Educación</a></li>
                 </ul>
-                <img src="descarga.png" class="logo2" alt="">
+                <img src="{% static 'core/img/descarga.png' %}" class="logo2" alt="">
             </div>
         </div>
     </footer>

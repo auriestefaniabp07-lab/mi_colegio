@@ -135,7 +135,7 @@ img {
 }
 
 .body2 {
-    background-image: url(img2.jpg);
+    background-image: url('../img/img2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

@@ -15,10 +15,10 @@
             <nav class="nav1">
                 <ul>
                     <li><a href="#">Inicio</a></li>
-                    <li><a href="{% static 'core//colegio2.html' %}">Estudiantes</a></li>
-                    <li><a href="seccion_colegio.html">Secciones</a></li>
-                    <li><a href="materia_colegio.html">Materias</a></li>
-                    <li><a href="docente_colegio.html">Docentes</a></li>
+                    <li><a href="{% url 'colegio2' %}">Estudiantes</a></li>
+                    <li><a href="{% url 'seccion_colegio' %}">Secciones</a></li>
+                    <li><a href="{% url 'materia_colegio' %}">Materias</a></li>
+                    <li><a href="{% url 'docente_colegio' %}">Docentes</a></li>
                 </ul>
             </nav>
         </div>
@@ -37,10 +37,10 @@
           <section class="section2">
             <h2 class="h21">Menú</h2>
             <Section class="container">
-                 <div><a href="colegio2.html"  class="ul1" ><img src="{% static 'core/img/img5 estu.jpg' %}" alt=""><h3>Estudiantes</h3></a></div>
-                 <div><a href="seccion_colegio.html" class="ul1"><img src="{% static 'core/img/img4.jpg' %}" alt=""><h3>Secciones</h3></a></div>
-                 <div><a href="materia_colegio.html"  class="ul1"><img src="{% static 'core/img/img4.jpg' %}" alt=""><h3>Materias</h3></a></div>
-                 <div><a href="docente_colegio.html"  class="ul1"><img src="{% static 'core/img/img3.jpg' %}" alt=""><h3>Docentes</h3></a></div>
+                 <div><a href="{% url 'colegio2' %}"  class="ul1" ><img src="{% static 'core/img/img5 estu.jpg' %}" alt=""><h3>Estudiantes</h3></a></div>
+                 <div><a href="{% url 'seccion_colegio' %}" class="ul1"><img src="{% static 'core/img/img4.jpg' %}" alt=""><h3>Secciones</h3></a></div>
+                 <div><a href="{% url 'materia_colegio' %}"  class="ul1"><img src="{% static 'core/img/img4.jpg' %}" alt=""><h3>Materias</h3></a></div>
+                 <div><a href="{% url 'docente_colegio' %}"  class="ul1"><img src="{% static 'core/img/img3.jpg' %}" alt=""><h3>Docentes</h3></a></div>
             </Section>
         </section>
     </main>

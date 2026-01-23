@@ -1,9 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="colegio.css">
+    <link rel="stylesheet" href="{% static 'core/css/colegio.css' %}">
     <title>Document</title>
 </head>
 <body>
@@ -11,14 +12,14 @@
        
         <div class="menu">
             <a href="" class="Logo">Logo</a>
-            <img class="imgLogo" src="descarga.png" alt="">
+            <img class="imgLogo" src="{% static 'core/img/descarga.png' %}" alt="">
             <nav class="nav1">
                 <ul>
-                    <li><a href="colegio.html">Inicio</a></li>
-                    <li><a href="colegio2.html">Estudiantes</a></li>
-                    <li><a href="seccion_colegio.html">Secciones</a></li>
-                    <li><a href="materia_colegio.html">Materias</a></li>
-                    <li><a href="docente_colegio.html">Docentes</a></li>
+                    <li><a href="{% url 'index' %}">Inicio</a></li>
+                    <li><a href="{% url 'colegio2' %}">Estudiantes</a></li>
+                    <li><a href="{% url 'seccion_colegio' %}">Secciones</a></li>
+                    <li><a href="{% url 'materia_colegio' %}">Materias</a></li>
+                    <li><a href="{% url 'docente_colegio' %}">Docentes</a></li>
                 </ul>
             </nav>
         </div>
@@ -33,7 +34,7 @@
                     símbolos y formas.</p>
                 </div>
                 <div class="img.mate">
-                    <img src="matematica.png" alt="">
+                    <img src="{% static 'core/img/matematica.png' %}" alt="">
                 </div>
             </div>
             <div class="primera">
@@ -43,7 +44,7 @@
                     y la energía.</p>
                 </div>
                 <div class="img.quimica">
-                    <img src="quimica.jpg" alt="">
+                    <img src="{% static 'core/img/quimica.jpg' %}" alt="">
                 </div>
             </div>
             <div class="primera">
@@ -54,7 +55,7 @@
                     </p>
                 </div>
                 <div class="img.fisica">
-                    <img src="fisica.avif" alt="">
+                    <img src="{% static 'core/img/fisica.avif' %}" alt="">
                 </div>
             </div>
             <div class="primera">
@@ -65,7 +66,7 @@
                     </p>
                 </div>
                 <div class="img.lenguaje">
-                    <img src="castellano.jpg" alt="">
+                    <img src="{% static 'core/img/castellano.jpg' %}" alt="">
                 </div>
             </div>
             <div class="primera">
@@ -75,7 +76,7 @@
                     vital para la comunicación internacional, la ciencia y el entretenimiento.</p>
                 </div>
                 <div class="img.ingles">
-                    <img src="ingles.jpg" alt="">
+                    <img src="{% static 'core/img/ingles.jpg' %}" alt="">
                 </div>
             </div>
             <div class="primera">
@@ -85,7 +86,7 @@
                     desde lo más pequeño (células, ADN) hasta los grandes ecosistema.</p>
                 </div>
                 <div class="img.biologia">
-                    <img src="biologia.png" alt="">
+                    <img src="{% static 'core/img/biologia.png' %}" alt="">
                 </div>
             </div>
             <div class="primera">
@@ -96,7 +97,7 @@
                     individuo en la sociedad</p>
                 </div>
                 <div class="img.ghc">
-                    <img src="ghc4.avif" alt="">
+                    <img src="{% static 'core/img/ghc4.avif' %}" alt="">
                 </div>
             </div>
             <div class="primera">
@@ -106,7 +107,7 @@
                     habilidades e intereses con opciones educativas y laborales.</p>
                 </div>
                 <div class="img.orientacion">
-                    <img src="orient.jpg" alt="">
+                    <img src="{% static 'core/img/orient.jpg' %}" alt="">
                 </div>
             </div>
         </section>
@@ -123,7 +124,7 @@
                     <li><a href="https://convivenciadigital.cl/las-10-webs-educativas-que
                         -no-te-pueden-faltar-esta-vuelta-a-clases/">Mejor Educación</a></li>
                 </ul>
-                <img src="descarga.png" class="logo2" alt="">
+                <img src="{% static 'core/img/descarga.png' %}" class="logo2" alt="">
             </div>
         </div>
     </footer>
