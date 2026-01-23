@@ -1,16 +1,17 @@
+{% Load static %} 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="colegio.css">
+    <link rel="stylesheet" href="{% static 'core/css/colegio.css' %}">
     <title>Document</title>
 </head>
 <body class="body2">
     <header class="header1">
         <div class="menu">
             <a href="" class="Logo">Logo</a>
-            <img class="imgLogo" src="descarga.png" alt="">
+            <img class="imgLogo" src="{% static 'core/img/descarga.png' %}" alt="">
             <nav class="nav1">
                 <ul>
                     <li><a href="colegio.html">Inicio</a></li>

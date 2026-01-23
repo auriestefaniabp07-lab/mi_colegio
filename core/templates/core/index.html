@@ -11,11 +11,11 @@
     <header class="header1">
         <div class="menu">
             <a href="" class="Logo">Logo</a>
-            <img class="imgLogo" src="descarga.png" alt="">
+            <img class="imgLogo" src="{% static 'core/img/descarga.png' %}" alt="">
             <nav class="nav1">
                 <ul>
                     <li><a href="#">Inicio</a></li>
-                    <li><a href="colegio2.html">Estudiantes</a></li>
+                    <li><a href="{% static 'core//colegio2.html' %}">Estudiantes</a></li>
                     <li><a href="seccion_colegio.html">Secciones</a></li>
                     <li><a href="materia_colegio.html">Materias</a></li>
                     <li><a href="docente_colegio.html">Docentes</a></li>
@@ -39,8 +39,8 @@
             <Section class="container">
                  <div><a href="colegio2.html"  class="ul1" ><img src="{% static 'core/img/img5 estu.jpg' %}" alt=""><h3>Estudiantes</h3></a></div>
                  <div><a href="seccion_colegio.html" class="ul1"><img src="{% static 'core/img/img4.jpg' %}" alt=""><h3>Secciones</h3></a></div>
-                 <div><a href="materia_colegio.html"  class="ul1"><img src="img4.jpg" alt=""><h3>Materias</h3></a></div>
-                 <div><a href="docente_colegio.html"  class="ul1"><img src="img3.jpg" alt=""><h3>Docentes</h3></a></div>
+                 <div><a href="materia_colegio.html"  class="ul1"><img src="{% static 'core/img/img4.jpg' %}" alt=""><h3>Materias</h3></a></div>
+                 <div><a href="docente_colegio.html"  class="ul1"><img src="{% static 'core/img/img3.jpg' %}" alt=""><h3>Docentes</h3></a></div>
             </Section>
         </section>
     </main>
@@ -57,7 +57,7 @@
                     <li><a href="https://convivenciadigital.cl/las-10-webs-educativas-que
                         -no-te-pueden-faltar-esta-vuelta-a-clases/">Mejor Educación</a></li>
                 </ul>
-                <img src="descarga.png" class="logo2" alt="">
+                <img src="{% static 'core/img/descarga.png' %}" class="logo2" alt="">
             </div>
         </div>
     </footer>
