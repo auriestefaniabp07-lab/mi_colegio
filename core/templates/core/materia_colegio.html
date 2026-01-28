@@ -1,133 +1,13 @@
+{% extends "core/base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'core/css/colegio.css' %}">
-    <title>Document</title>
-</head>
+
+{% block title %} materia colegio {% endblock %}
+{% block content %}
 <body>
-     <header class="header1">
-       
-        <div class="menu">
-            <a href="" class="Logo">Logo</a>
-            <img class="imgLogo" src="{% static 'core/img/descarga.png' %}" alt="">
-            <nav class="nav1">
-                <ul>
-                    <li><a href="{% url 'index' %}">Inicio</a></li>
-                    <li><a href="{% url 'colegio2' %}">Estudiantes</a></li>
-                    <li><a href="{% url 'seccion_colegio' %}">Secciones</a></li>
-                    <li><a href="{% url 'materia_colegio' %}">Materias</a></li>
-                    <li><a href="{% url 'docente_colegio' %}">Docentes</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
     <main>
         <section class="todasMaterias">
-            <div class="primera">
-                <div class="mate">
-                    <h3>Matemáticas</h3>
-                    <p>Ciencia que estudia cantidades, magnitudes, estructuras y cambios, utilizando
-                    la lógica para resolver problemas, describir números, 
-                    símbolos y formas.</p>
-                </div>
-                <div class="img.mate">
-                    <img src="{% static 'core/img/matematica.png' %}" alt="">
-                </div>
-            </div>
-            <div class="primera">
-                <div class="quimica">
-                    <h3>Química</h3>
-                    <p>Ciencia que estudia la materia (todo lo que tiene masa y ocupa espacio)
-                    y la energía.</p>
-                </div>
-                <div class="img.quimica">
-                    <img src="{% static 'core/img/quimica.jpg' %}" alt="">
-                </div>
-            </div>
-            <div class="primera">
-                <div class="fisica">
-                    <h3>Física</h3>
-                    <p> Ciencia fundamental que estudia la naturaleza,
-                    la materia, la energía, el espacio y el tiempo.
-                    </p>
-                </div>
-                <div class="img.fisica">
-                    <img src="{% static 'core/img/fisica.avif' %}" alt="">
-                </div>
-            </div>
-            <div class="primera">
-                <div class="lenguaje">
-                    <h3>Lenguaje</h3>
-                    <p>Segunda lengua materna más hablada del mundo y
-                    es la lengua oficial de 21 países.
-                    </p>
-                </div>
-                <div class="img.lenguaje">
-                    <img src="{% static 'core/img/castellano.jpg' %}" alt="">
-                </div>
-            </div>
-            <div class="primera">
-                <div class="ingles">
-                    <h3>Inglés</h3>
-                    <p>Lengua germánica globalmente influyente,
-                    vital para la comunicación internacional, la ciencia y el entretenimiento.</p>
-                </div>
-                <div class="img.ingles">
-                    <img src="{% static 'core/img/ingles.jpg' %}" alt="">
-                </div>
-            </div>
-            <div class="primera">
-                <div class="biologia">
-                    <h3>Biología</h3>
-                    <p>Es la ciencia que estudia la vida en todas sus formas,
-                    desde lo más pequeño (células, ADN) hasta los grandes ecosistema.</p>
-                </div>
-                <div class="img.biologia">
-                    <img src="{% static 'core/img/biologia.png' %}" alt="">
-                </div>
-            </div>
-            <div class="primera">
-                <div class="ghc">
-                    <h3>Geografia, Historia y Ciudadania</h3>
-                    <p>Geografía estudia el espacio y la interacción humano-ambiente; Historia, el pasado 
-                    para entender el presente; y Ciudadanía, los derechos y deberes del
-                    individuo en la sociedad</p>
-                </div>
-                <div class="img.ghc">
-                    <img src="{% static 'core/img/ghc4.avif' %}" alt="">
-                </div>
-            </div>
-            <div class="primera">
-                <div class="orientacion">
-                    <h3>Orientación Vocacional</h3>
-                    <p>Es un proceso de autoconocimiento para alinear tus gustos,
-                    habilidades e intereses con opciones educativas y laborales.</p>
-                </div>
-                <div class="img.orientacion">
-                    <img src="{% static 'core/img/orient.jpg' %}" alt="">
-                </div>
-            </div>
+            {% include 'core/includes/materias.html' %}
         </section>
     </main>
-    <footer class="footer1">
-        <div class="footer-content container">
-            <div class="footer2">
-                <h3>Más Información: </h3>
-                <br>
-                <ul class="masinformacion">
-                    <li><a href="#">Contacto: </a>04165786842</li>
-                    <li><a href="https://www.facebook.com/?locale=es_LA">Facebook: </a>Colegio Academia Educativa</li>
-                    <li><a href="https://www.google.com/?hl=es">Google: </a>Buscar</li>
-                    <li><a href="https://convivenciadigital.cl/las-10-webs-educativas-que
-                        -no-te-pueden-faltar-esta-vuelta-a-clases/">Mejor Educación</a></li>
-                </ul>
-                <img src="{% static 'core/img/descarga.png' %}" class="logo2" alt="">
-            </div>
-        </div>
-    </footer>
-    <a href="#" class="botonS"></a>
 </body>
-</html>
+{% endblock %}
