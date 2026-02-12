@@ -1,0 +1,46 @@
+{% extends "core/base.html" %}
+{% load static %} 
+
+{% block title %} Registro estudiantes {% endblock %}
+{% block content %}
+    <section class="main">
+        <figure class="main__figure">
+            <img src="{% static 'core/img/img2.jpg' %}" class="main__img" alt="">
+        </figure>
+
+        <div class="main__contact">
+            <h2 class="main__title">Registro Estudiante</h2>
+            <p class="main__paragraph">Ingresa los datos del estudiante</p>
+            <form class="main__form" method="POST" enctype="multipart/form-data" action="{% url 'student_create' %}">
+                {% csrf_token %}
+
+                <input type="text" name="name" placeholder="Nombre del estudiante" class="main__input" required>
+                <input type="text" name="lastname" placeholder="apellido del estudiante" class="main__input" required>
+                <input type="text" name="phone" placeholder="numero de telefono" class="main__input" required>
+                <input type="email" name="email" placeholder="ingresa tu correo" class="main__input" required>
+                <input type="text" name="direction" placeholder="Ej. Av. Siempreviva 742" autocomplete="street-address" class="main__input" required>
+                
+                <div class="form-group-row">
+                    <input type="text" name="dni" id="documento_id" maxlength="12" placeholder="Número de documento" class="main__input" required>
+                    <input type="text" name="gender" placeholder="Ingresa tu genero" class="main__input" required>
+
+                </div>
+                
+                <input type="date" id="nacimiento" name="date_birth" min="1940-01-01" max="2022-12-31" class="main__input" required>
+
+                <select name="section" id="section" class="main__input" required>
+                    <option value="" disabled selected> secciones </option>
+                        {% for section_obj in sections %}
+                            <option value="{{section_obj.id}}" {% if section_obj.id == section_id|add:"0" %}
+                            selected{% endif %}>{{ section_obj.letter_section}}</option>
+                        {% endfor %}
+                </select>
+
+
+                <input type="submit" value="Registrar estudiante" class="main_input main_input--send" >
+                <button class="botonnegro"><a href="">Estudiantes registrados</a></button>
+            </form>
+        </div>
+    </section>
+{% endblock %}
+</html>

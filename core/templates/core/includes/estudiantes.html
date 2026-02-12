@@ -1,0 +1,10 @@
+{% load static %}
+
+<div class="primero">
+    <div class="estud">
+        <h3>{{ s.name }} {{ s.lastname }} - {{ s.dni }}</h3>
+        <p>Número de telefono: {{ s.phone }}, Dirección: {{ s.direction }}.</p>
+        <br>
+        <a href="{% url 'student_update' id=s.id %}" class="button-update"> Actualizar </a>
+    </div>
+</div>

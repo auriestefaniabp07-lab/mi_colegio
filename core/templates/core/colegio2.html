@@ -4,7 +4,9 @@
 {% block title %} colegio 2 {% endblock %}
 {% block content %}
 
-<body class="body2">
+<form class="body2" method="post" action="{% url 'student_create' %}">
+    <fieldset>
+        {% csrf_token %}
     <main>
         <div class="contenedor">
             <div class="cuadro">
@@ -24,5 +26,5 @@
             </div>
         </div>
     </main>
-</body>
+</form>
 {% endblock %}

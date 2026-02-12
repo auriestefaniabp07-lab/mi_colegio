@@ -1,0 +1,53 @@
+{% extends "core/base.html" %}
+{% load static %} 
+
+{% block title %} Registro estudiantes {% endblock %}
+{% block content %}
+    <section class="main">
+        <figure class="main__figure">
+            <img src="{% static 'core/img/img2.jpg' %}" class="main__img" alt="">
+        </figure>
+
+        <div class="main__contact">
+            <h2 class="main__title">Registro Estudiante</h2>
+            <p class="main__paragraph">Ingresa los datos del estudiante</p>
+            <form class="main__form" method="POST" enctype="multipart/form-data" action="{% url 'student_update' id=student.id %}">
+                {% csrf_token %}
+
+                <input type="text" name="name" placeholder="Nombre del estudiante" class="main__input" 
+                value="{{ student.name }}" required>
+                <input type="text" name="lastname" placeholder="apellido del estudiante" class="main__input" 
+                value="{{ student.lastname}}" required>
+                <input type="text" name="phone" placeholder="numero de telefono" class="main__input" 
+                value="{{ student.phone }}" required>
+                <input type="email" name="email" placeholder="ingresa tu correo" class="main__input" 
+                value="{{ student.email }}" required>
+                <input type="text" name="direction" placeholder="Ej. Av. Siempreviva 742" autocomplete="street-address" class="main__input" value="{{ student.direction}}" required>
+                
+                <div class="form-group-row">
+                    <input type="text" name="dni" id="documento_id" maxlength="12" placeholder="Número de cédula" class="main__input" value="{{ student.dni }}" required>
+                    <input type="text" name="gender" placeholder="Ingresa tu genero" class="main__input" value="{{ student.gender }}" required>
+
+                </div>
+                
+                <input type="date" id="nacimiento" name="date_birth" min="1940-01-01" max="2022-12-31" class="main__input" value="{{ student.date_birth|date:'Y-m-d' }}" required>
+
+                <select name="section" id="section" class="main__input" required>
+                    <option value="" disabled selected> secciones </option>
+                        {% for section_obj in sections %}
+                            <option value="{{section_obj.id}}" {% if student.section and section_obj.id == student.section.id %}
+                            selected{% endif %}>{{ section_obj.letter_section}}</option>
+                        {% endfor %}
+                </select>
+
+
+                <input type="submit" value="Registrar estudiante" class="main_input main_input--send">
+            </form>
+            <p>
+                <a href="{% url 'estudiantes' %}"> Volver a la lista de estudiantes</a>
+            </p>
+        </div>
+    </section>
+
+{% endblock %}
+</html>

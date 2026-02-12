@@ -1,0 +1,23 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %} estudiantes {% endblock %}
+{% block content %}
+<body>
+    <main>
+        <section class="todasMaterias">
+        {% if students %}
+                {% for s in students %}
+                    <a href="{% url 'student_detail' id=s.id %}">
+                    {% include 'core/includes/estudiantes.html' %}</a>
+                {% endfor %}
+        {% else %}
+            <p>No hay estudiantes disponibles</p>
+        {% endif %}
+        <p>
+            <a href="{% url 'student_create' %}" class="crearE"> Crear estudiante</a>
+        </p>
+        </section>
+    </main>
+</body>
+{% endblock %}

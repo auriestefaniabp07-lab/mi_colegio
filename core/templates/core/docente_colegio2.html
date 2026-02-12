@@ -5,10 +5,228 @@
 {% block content %}
 <body> 
     <main>
-        <section class="registrodocente">
-            <h1>Bienvenido(a)</h1>
-            <p>Por los momentos no hay registros de docentes</p>
-        </section>
+        <nav class="sidebar">
+            <ul>
+                <li>
+                    <h1 class="li1">Materia:</h1>
+                    <ul>
+                        <li > <a href="table">- Inglés</a></li>
+                        <li>- Matemática</li>
+                        <li>- Lenguaje</li>
+                        <li>- Deporte</li>
+                        <li>- Quimica</li>
+                        <li>- Física</li>
+                        <li>- Biología</li>
+                        <li>- Orientación vocacional</li>
+                        <li>- Geografía, Historia y Ciudadania</li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <div class="cart">            
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Inglés: </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Docente: Auri Benavides. </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Imparte en la sección: <a href="{% url 'colegio2' %}">A</a></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="cart">            
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Matemática </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Docente: Maria. </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Imparte en la sección: <a href="#">A</a></td>
+                            <td>Imparte en la sección: <a href="#">B</a></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="cart">            
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Lenguaje </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Docente: jose Perez. </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Imparte en la sección: <a href="#">B</a></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="cart">            
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Deporte </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Docente: Maria. </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Imparte en la sección: <a href="#">A</a></td>
+                            <td>Imparte en la sección: <a href="#">B</a></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="cart">            
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Química </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Docente: Maria. </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Imparte en la sección: <a href="#">A</a></td>
+                            <td>Imparte en la sección: <a href="#">B</a></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="cart">            
+                <table>
+                    <thead>
+                        <tr>
+                            <td>física </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Docente: Maria. </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Imparte en la sección: <a href="#">A</a></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="cart">            
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Biología </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Docente: Maria. </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Imparte en la sección: <a href="#">A</a></td>
+                            <td>Imparte en la sección: <a href="#">B</a></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="cart">            
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Orientación vocacional </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Docente: Maria. </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Imparte en la sección: <a href="#">A</a></td>
+                            <td>Imparte en la sección: <a href="#">B</a></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="cart">            
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Geografía, Historia y ciudadania </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Docente: Maria. </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Imparte en la sección: <a href="#">A</a></td>
+                            <td>Imparte en la sección: <a href="#">B</a></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
     </main>
 </body>
 {% endblock %}

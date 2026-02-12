@@ -1,0 +1,12 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% include 'core/includes/estudiantes.html' %}
+
+<p> 
+    <a href="{% url 'estudiantes' %}"> Volver a la lista de estudiantes </a>
+</p>
+
+{% endblock %}
