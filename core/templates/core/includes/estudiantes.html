@@ -5,6 +5,7 @@
         <h3>{{ s.name }} {{ s.lastname }} - {{ s.dni }}</h3>
         <p>Número de telefono: {{ s.phone }}, Dirección: {{ s.direction }}.</p>
         <br>
-        <a href="{% url 'student_update' id=s.id %}" class="button-update"> Actualizar </a>
+        <a href="{% url 'student_update' id=s.id %}" class="button-update"> - Actualizar </a>
+        <a href="{% url 'student_delete' id=s.id %}" class="button-delete"> - Eliminar </a>
     </div>
 </div>

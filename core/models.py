@@ -81,6 +81,11 @@ class Subject(models.Model):
 
     def __str__(self):
         return f"{self.name} ({self.description})"
+    
+    def delete(self, *args, **kwargs):
+        if self.image:
+            self.image.delete()
+        super().delete(*args, **kwargs)
 
 # ------------------------------------------------------
 # Docente

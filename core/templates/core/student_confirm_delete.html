@@ -1,0 +1,9 @@
+<section>
+    <h1>¿Estas seguro de que quieres eliminar "{{ student.name }}"? </h1>
+    <p>Esta acción no se puede deshacer.</p>
+
+    <form method="post" action="{% url 'student_delete' id=student.id %}">
+        {% csrf_token %}
+        <button type="submit" class="button-delete">Si, eliminar</button>
+        <a href="{% url 'student_detail' id=student.id %}">No, cancelar</a>
+</section>

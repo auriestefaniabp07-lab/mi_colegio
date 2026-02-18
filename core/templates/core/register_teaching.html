@@ -1,24 +1,24 @@
 {% extends "core/base.html" %}
 {% load static %} 
 
-{% block title %} Registro estudiantes {% endblock %}
+{% block title %} Registro Docente {% endblock %}
 {% block content %}
     <section class="main">
         <figure class="main__figure">
-            <img src="{% static 'core/img/img2.jpg' %}" class="main__img" alt="">
+            <img src="{% static 'core/img/docente.webp' %}" class="main__img" alt="">
         </figure>
 
         <div class="main__contact">
-            <h2 class="main__title">Registro Estudiante</h2>
-            <p class="main__paragraph">Ingresa los datos del estudiante</p>
-            <form class="main__form" method="POST" enctype="multipart/form-data" action="{% url 'register_student' %}">
+            <h2 class="main__title">Registro Docente</h2>
+            <p class="main__paragraph">Ingresa los datos del docente</p>
+            <form class="main__form" method="POST" enctype="multipart/form-data" action="{% url 'register_teaching' %}">
                 {% csrf_token %}
 
-                <input type="text" name="name" placeholder="Nombre del estudiante" class="main__input">
+                <input type="text" name="name" placeholder="Nombre del docente" class="main__input">
                 {% if errors.name %}
                     <p style="color: red;">{{ errors.name }}</p>
                 {% endif %}
-                <input type="text" name="lastname" placeholder="apellido del estudiante" class="main__input">
+                <input type="text" name="lastname" placeholder="apellido del docente" class="main__input">
                 {% if errors.lastname %}
                     <p style="color: red;">{{ errors.lastname }}</p>
                 {% endif %}
@@ -34,30 +34,28 @@
                 {% if errors.direction %}
                     <p style="color: red;">{{ errors.direction }}</p>
                 {% endif %}
+                <input type="text" id="especialidad" name="specialty" placeholder="Ingresa tu especialidad" class="main__input">
                 <div class="form-group-row">
                     <input type="text" name="dni" id="documento_id" maxlength="12" placeholder="Número de documento" class="main__input">
                     {% if errors.dni %}
                     <p style="color: red;">{{ errors.dni }}</p>
                     {% endif %}
-                    <input type="text" name="gender" placeholder="Ingresa tu genero" class="main__input">
+                    
                 </div>
-                
-                <input type="date" id="nacimiento" name="date_birth" min="1940-01-01" max="2022-12-31" class="main__input">
-                {% if errors.date_birth %}
-                    <p style="color: red;">{{ errors.date_birth }}</p>
-                {% endif %}
 
-                <select name="section" id="section" class="main__input" required>
-                    <option value="" disabled selected> secciones </option>
-                        {% for section_obj in sections %}
-                            <option value="{{section_obj.id}}" {% if section_obj.id == section_id|add:"0" %}
-                            selected{% endif %}>{{ section_obj.letter_section}}</option>
+                <select name="subject" id="subject" class="main__input" required>
+                    <option value="" disabled selected> Materias </option>
+                        {% for subject_obj in subjects %}
+                            <option value="{{subject_obj.id}}" {% if subject_obj.id == subject_id|add:"0" %}
+                            selected{% endif %}>{{ subject_obj.name}}</option>
                         {% endfor %}
                 </select>
-
-
-                <input type="submit" value="Registrar estudiante" class="main_input main_input--send" >
-                <button class="botonnegro"><a href="{% url 'estudiantes' %}">Estudiantes registrados</a></button>
+                {% if errors.subject %}
+                    <p style="color: red;">{{ errors.subject }}</p>
+                {% endif %}
+                
+                <input type="submit" value="Registrar docente" class="main_input main_input--send" >
+                <button class="botonnegro"><a href="{% url 'docente_colegio2' %}">Docente registrados</a></button>
             </form>
         </div>
     </section>

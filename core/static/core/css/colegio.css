@@ -23,7 +23,7 @@ img {
     display: flex;
     align-items: center;
     background-color:silver;
-    padding: 70px 0 0 0;
+    padding: 80px 0 0 0;
 }
 
 .menu {
@@ -39,10 +39,12 @@ img {
 }
 
 .Logo {
-    font-size: 25px;
+    font-size: 30px;
     color: black;
     text-transform: uppercase;
     font-weight: 800;
+    margin-right: 0px;
+    margin-left: 25px;
 }
 
 .menu .nav1 ul li {
@@ -52,7 +54,7 @@ img {
 }
 
 .menu .nav1 ul li a {
-    font-size: 18px;
+    font-size: 25px;
     padding: 20px;
     color: black;
     display: block;
@@ -90,16 +92,18 @@ img {
 .div4 {
     padding-top: 12rem;
     min-height: 130vh;
-    font-size: 30px;
+    font-size: 32px;
     text-transform: capitalize;
     line-height: 1;
     color: black;
     margin-bottom: 100px;
     transition: all 0.3s ease;
+    margin-right: 20px;
+    padding-left: 35px;
 }
 
 .div4 .primerboton {
-    font-size: 30px;
+    font-size: 40px;
     cursor: pointer;
     line-height: 1;
     background-color:silver ;
@@ -693,19 +697,32 @@ input.placeholder {
     gap: 10px;
     color: black;
     font-weight: bold;
+    margin: 30px;
 
 }
 
 .crearE {
+    position: fixed;
+    top: 70px;
+    right: 1250px;
     font-weight: bold;
-    width: 45%;
-    height: 200px;
-    border-radius: 10px;
+    width: 20%;
+    height: 80px;
+    border-radius: 0px;
     box-shadow: 0 8px 10px black;
     margin-top: 20px;
     margin-left: auto;
     margin-left: auto;
     margin-bottom: 10px;
-    background: 20px;
+    background: 10px;
     font-size: 25px
+}
+
+.button-delete {
+    padding: 80px;
+    gap: 10px;
+    color: black;
+    font-weight: bold;
+    margin: 30px
+    
 }
